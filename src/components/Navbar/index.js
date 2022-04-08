@@ -1,53 +1,40 @@
 import React from "react";
+import { Link, Outlet } from "react-router-dom";
 import {
     Nav,
     NavLogo,
-    NavLink,
-    Bars,
-    NavMenu,
-    NavBtn,
-    NavBtnLink,
 } from "./NavbarElements";
 
 const Navbar = () => {
     return (
         <>
-           <Nav style={{background:'black'}}>
+           <Nav>
             <NavLogo to="/">
-                React
+                REACT
             </NavLogo>
-            <Bars />
-
-            <NavMenu>
-                <NavLink 
-                  to="/" 
-                  activeStyle={{ color:'white' }}
+                <Link style={{marginRight:'87px'}} 
+                  to="/home" 
                 >
                     Home
-                </NavLink>
-                <NavLink 
+                </Link>
+                <Link style={{marginRight:'87px'}}
                   to="/about" 
-                  activeStyle={{ color: 'white' }}
                 >
                     About
-                </NavLink>
-                <NavLink 
+                </Link>
+                <Link style={{marginRight:'87px'}}
                   to="/contact" 
-                  activeStyle={{ color: 'white' }}
                 >
                     Contact
-                </NavLink>
-                <NavLink 
+                </Link>
+                <Link style={{marginRight:'87px'}}
                   to="/signin" 
-                  activeStyle={{ color: 'white' }}
                 >
                     Sign In
-                </NavLink>
-                <NavBtn>
-                    <NavBtnLink to="/sign-up">Sign Up</NavBtnLink>                
-                </NavBtn>
-            </NavMenu> 
-           </Nav> 
+                </Link>
+                    <Link style={{marginRight:'87px'}} to="/sign-up">Sign Up</Link>
+           </Nav>  
+           <Outlet />
         </>
     );
 };
