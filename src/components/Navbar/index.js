@@ -4,13 +4,14 @@ import {
     Nav,
     NavLogo,
 } from "./NavbarElements";
+import logo192 from '../../logo192.png'
 
 const Navbar = () => {
     return (
         <>
            <Nav>
             <NavLogo to="/">
-                REACT
+                <img className="reactLogo" src={logo192} alt="Logo"></img>
             </NavLogo>
                 <Link style={{marginRight:'87px'}} 
                   to="/home" 
