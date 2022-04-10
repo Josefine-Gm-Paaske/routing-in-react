@@ -5,13 +5,15 @@ const style = {
   padding: "100px",
   width: "220px",
   margin: "auto",
-  marginTop:"220px"
+  marginTop:"220px",
+  color: "rgb(0, 54, 144)"
 };
 
 const inputFields = {
   padding: "10px",
   width: "195px",
   margin: "auto",
+  color:"rgb(0, 54, 144)"
 };
 
 const FORM_ENDPOINT = ""; // TODO - fill on the later step
@@ -27,10 +29,10 @@ const Contact = () => {
   if (submitted) {
     return (
       <>
-        <div style={{ margin: "20px" }} className="text-2xl">
+        <div style={{ margin: "20px" , color:"rgb(0, 54, 144)"}} className="text-2xl">
           Thank you!
         </div>
-        <div style={{ margin: "20px" }} className="text-md">
+        <div style={{ margin: "20px", color:"rgb(0, 54, 144)"}} className="text-md">
           We'll be in touch soon.
         </div>
       </>
@@ -72,7 +74,7 @@ const Contact = () => {
             required
           />
         </div>
-        <div className="mb-3 pt-0">
+        <div style={{color:"rgb(0, 54, 144)"}} className="mb-3 pt-0">
           <button className="button" type="submit">
             Send a message
           </button>
