@@ -3,7 +3,7 @@ import React from 'react';
 const style = {
   marginLeft:"20px",
   marginRight:"20px",
-  color: "rgb(0, 54, 144)"
+  color: "rgba(0, 0, 0, 0.65)"
 };
 
 const Home = () => {

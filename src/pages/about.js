@@ -1,7 +1,7 @@
 import React from "react";
 const styleText = {
   paddingLeft: "18px",
-  color: "#003690",
+  color: "rgba(0, 0, 0, 0.65)",
   marginTop: "10px",
   marginBottom: "0px",
   marginLeft:"20px",
