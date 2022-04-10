@@ -41,15 +41,14 @@ const style = {
       );
     }
   
-    /*function check(input) {
-      if (input.value !== document.getElementById('password').value) {
-          input.setCustomValidity('Password Must be Matching.');
-      } else {
-          // input is valid -- reset the error message
-          input.setCustomValidity('');
-      }
-  }*/
 
+  function check_input(){
+  var passwordInput=document.getElementById('password').value;
+  var passwordConfirm=document.getElementById('password_confirm').value; 
+    if(passwordInput!==passwordConfirm){
+      alert('Passwords must be the same');
+    }
+}
     return (
       <center>
         <form
@@ -74,7 +73,7 @@ const style = {
               type="password"
               placeholder="Password"
               name="password"
-              className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+              className="form-control"
               required="required"
             />
           </div>
@@ -84,9 +83,9 @@ const style = {
               type="password"
               placeholder="Repeat Password"
               name="password_confirm"
-              className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+              className="form-control"
               required="required"
-              //onInput={check}
+              onKeyUp={check_input}
             />
           </div>
           <div style={{color:"rgb(0, 54, 144)"}} className="mb-3 pt-0">
