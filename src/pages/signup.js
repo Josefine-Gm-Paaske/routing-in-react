@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const style = {
-    backgroundColor: "#2055ae",
+    backgroundColor: "#8e939c",
     padding: "100px",
     width: "220px",
     margin: "auto",
@@ -16,7 +16,7 @@ const style = {
     color:"rgb(0, 54, 144)"
   };
   
-  const FORM_ENDPOINT = ""; // TODO - fill on the later step
+ const FORM_ENDPOINT = ""; // TODO - fill on the later step
   
   const SignUp = () => {
     const [submitted, setSubmitted] = useState(false);
@@ -69,14 +69,11 @@ const style = {
           </div>
           <div style={{color:"rgb(0, 54, 144)"}} className="mb-3 pt-0">
             <button className="button" type="submit">
-              Log in
+              Confirm
             </button>
           </div>
         </form>
       </center>
     );
-  };
-  
-
-
+    }
 export default SignUp;
