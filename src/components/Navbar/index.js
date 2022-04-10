@@ -13,27 +13,27 @@ const Navbar = () => {
             <NavLogo to="/">
                 <img className="reactLogo" src={logo192} alt="Logo"></img>
             </NavLogo>
-                <Link style={{marginRight:'87px'}} 
+                <Link  
                   to="/home" 
                 >
                     Home
                 </Link>
-                <Link style={{marginRight:'87px'}}
+                <Link 
                   to="/about" 
                 >
                     About
                 </Link>
-                <Link style={{marginRight:'87px'}}
+                <Link 
                   to="/contact" 
                 >
                     Contact
                 </Link>
-                <Link style={{marginRight:'87px'}}
+                <Link 
                   to="/signin" 
                 >
                     Sign In
                 </Link>
-                    <Link style={{marginRight:'87px'}} to="/sign-up">Sign Up</Link>
+                    <Link  to="/signup">Sign Up</Link>
            </Nav>  
            <Outlet />
         </>
