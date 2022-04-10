@@ -1,10 +1,14 @@
 body {
   margin: 0;
+  font-family:Arial;
 }
 
 a {
   color: white;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight:500;
+  text-decoration: none;
+  margin: 30px;
 }
 
 .reactLogo{
