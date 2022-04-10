@@ -10,7 +10,7 @@ const Navbar = () => {
     return (
         <>
            <Nav>
-            <NavLogo to="/">
+            <NavLogo to="/home">
                 <img className="reactLogo" src={logo192} alt="Logo"></img>
             </NavLogo>
                 <Link  

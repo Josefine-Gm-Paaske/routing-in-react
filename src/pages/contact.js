@@ -16,6 +16,13 @@ const inputFields = {
   color:"rgb(0, 54, 144)"
 };
 
+const textarea = {
+  fontFamily: "Arial",
+  padding: "10px",
+  width: "auto",
+  margin: "auto",
+}
+
 const FORM_ENDPOINT = ""; // TODO - fill on the later step
 
 const Contact = () => {
@@ -67,7 +74,7 @@ const Contact = () => {
           />
         </div>
         <div style={inputFields} className="mb-3 pt-0">
-          <textarea
+          <textarea style={textarea}
             placeholder="Your message"
             name="message"
             className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"

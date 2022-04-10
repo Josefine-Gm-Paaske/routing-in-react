@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 const style = {
     backgroundColor: "#8e939c",
     padding: "100px",
@@ -40,6 +41,15 @@ const style = {
       );
     }
   
+    /*function check(input) {
+      if (input.value !== document.getElementById('password').value) {
+          input.setCustomValidity('Password Must be Matching.');
+      } else {
+          // input is valid -- reset the error message
+          input.setCustomValidity('');
+      }
+  }*/
+
     return (
       <center>
         <form
@@ -59,12 +69,24 @@ const style = {
             />
           </div>
           <div style={inputFields} className="mb-3 pt-0">
-            <input
+            <input 
+              id='password'
               type="password"
               placeholder="Password"
               name="password"
               className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-              required
+              required="required"
+            />
+          </div>
+          <div style={inputFields} className="mb-3 pt-0">
+            <input
+              id="password_confirm"
+              type="password"
+              placeholder="Repeat Password"
+              name="password_confirm"
+              className="px-3 py-3 placeholder-gray-400 text-gray-600 relative bg-white bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
+              required="required"
+              //onInput={check}
             />
           </div>
           <div style={{color:"rgb(0, 54, 144)"}} className="mb-3 pt-0">
