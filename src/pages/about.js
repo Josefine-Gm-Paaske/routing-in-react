@@ -4,6 +4,8 @@ const styleText = {
   color: "#003690",
   marginTop: "10px",
   marginBottom: "0px",
+  marginLeft:"20px",
+  marginRight:"25px"
 };
 const About = () => {
   return (
