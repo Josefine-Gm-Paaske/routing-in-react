@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const style = {
-  backgroundColor: "#8e939c",
+  backgroundColor: "black",
   padding: "100px",
   width: "220px",
   margin: "auto",
