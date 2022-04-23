@@ -6,9 +6,20 @@ import Contact from './pages/contact';
 import Home from './pages';
 import SignIn from './pages/signin';
 import SignUp from './pages/signup';
+import Chat from "./components/Chat/chat";
+import { PubNubProvider } from "pubnub-react";
+import PubNub from 'pubnub';
+
+const pn = new PubNub ({
+  publishKey: "pub-c-af9e408a-d4a8-473c-b591-81402cdf9aaf",
+  subscribeKey: "sub-c-7e76d5bc-2658-11e9-9508-c2e2c4d7488a",
+  uuid: 'username',
+});
 
 function App() {
+  
   return (
+  <div>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -19,6 +30,10 @@ function App() {
         <Route path="/signup" element={<SignUp />}></Route>
       </Routes>
     </BrowserRouter>
+    <PubNubProvider client={pn}>
+      <Chat />
+      </PubNubProvider>
+    </div>
   );
 }
 
