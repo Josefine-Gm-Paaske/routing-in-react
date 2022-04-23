@@ -31,9 +31,15 @@ import { usePubNub } from 'pubnub-react';
         }, [pubnub, channels]);
       
         return (
-          <div style={pageStyles}>
+          <div id='chat' style={pageStyles}>
             <div style={chatStyles}>
-              <div style={headerStyles}><button id='toggle'>Chat</button></div>
+              <div style={headerStyles}>
+                  <button 
+                  onClick={e => {
+                    var chat = document.getElementById("chat");
+                    e.preventDefault();
+                    chat.style.display = 'none';
+                  }} id='toggle'>Chat</button></div>
               <div style={listStyles}>
                 {messages.map((message, index) => {
                   return (
