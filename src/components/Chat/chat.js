@@ -33,7 +33,7 @@ import { usePubNub } from 'pubnub-react';
         return (
           <div style={pageStyles}>
             <div style={chatStyles}>
-              <div style={headerStyles}>Chat</div>
+              <div style={headerStyles}><button id='toggle'>Chat</button></div>
               <div style={listStyles}>
                 {messages.map((message, index) => {
                   return (
