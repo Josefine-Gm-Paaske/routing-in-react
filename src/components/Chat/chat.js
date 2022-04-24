@@ -17,6 +17,16 @@ import { usePubNub } from 'pubnub-react';
           }
         };
       
+
+        const chatDisplay = () => {
+          const chat = document.getElementById("chat");
+          if (chat.style.display === "none") {
+            chat.style.display = "block";
+          } else {
+            chat.style.display = "none";
+          }
+        }
+
         const sendMessage = message => {
           if (message) {
             pubnub
@@ -31,15 +41,12 @@ import { usePubNub } from 'pubnub-react';
         }, [pubnub, channels]);
       
         return (
-          <div id='chat' style={pageStyles}>
+          <><div id='chat' style={pageStyles}>
             <div style={chatStyles}>
               <div style={headerStyles}>
-                  <button style={chatHide} className='button'
-                  onClick={e => {
-                    var chat = document.getElementById("chat");
-                    e.preventDefault();
-                    chat.style.display = 'none';
-                  }} id='toggle'>Chat</button></div>
+                <button style={chatHide} className='button'
+                  >Chat</button>
+              </div>
               <div style={listStyles}>
                 {messages.map((message, index) => {
                   return (
@@ -56,23 +63,31 @@ import { usePubNub } from 'pubnub-react';
                   placeholder="Type your message"
                   value={message}
                   onKeyPress={e => {
-                    if (e.key !== 'Enter') return;
+                    if (e.key !== 'Enter')
+                      return;
                     sendMessage(message);
-                  }}
-                  onChange={e => setMessage(e.target.value)}
-                />
+                  } }
+                  onChange={e => setMessage(e.target.value)} />
                 <button
+                  title='Click to open/close the chat'
                   style={buttonStyles}
                   onClick={e => {
                     e.preventDefault();
                     sendMessage(message);
-                  }}
+                  } }
                 >
                   Send Message
                 </button>
               </div>
             </div>
           </div>
+          <><button 
+          style={chatShow}
+          onClick={e => {
+            e.preventDefault();
+            chatDisplay();
+          } }
+          >Chat</button></></>
         );
       }
       
@@ -148,4 +163,19 @@ import { usePubNub } from 'pubnub-react';
         cursor:'pointer',
         fontSize:'108%',
       }
+
+      const chatShow = {
+        border: 'none',
+        color: 'white',
+        fontSize:'20px',
+        fontWeight:'bold',
+        backgroundColor: 'black',
+        borderRadius: '50%',
+        position: 'absolute',
+        height: '80px',
+        width: '80px',
+        bottom: '8px',
+        right: '8px',
+      }
+
 export default Chat;
