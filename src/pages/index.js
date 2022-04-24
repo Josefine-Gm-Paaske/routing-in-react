@@ -1,9 +1,18 @@
+//https://mui.com/x/react-date-pickers/date-picker/
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
-//https://mui.com/x/react-date-pickers/date-picker/
+import { PubNubProvider } from "pubnub-react";
+import PubNub from 'pubnub';
+import Chat from '../components/Chat/chat';
+
+const pn = new PubNub ({
+  publishKey: "pub-c-af9e408a-d4a8-473c-b591-81402cdf9aaf",
+  subscribeKey: "sub-c-7e76d5bc-2658-11e9-9508-c2e2c4d7488a",
+  uuid: 'username',
+});
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
   ...theme.typography.body2,
@@ -41,6 +50,9 @@ export default function Home() {
         ))}
       </Grid>
     </Box>
+    <PubNubProvider client={pn}>
+      <Chat />
+      </PubNubProvider>
     </div>
   );
 }

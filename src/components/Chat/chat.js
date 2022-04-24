@@ -78,11 +78,11 @@ import { usePubNub } from 'pubnub-react';
       
       const pageStyles = {
         border: '1px solid black',
-        position: 'fixed',
-        height: '50vh',
-        minHeight: '100vh',
-        width: '50%',
-        marginTop:'108px'
+        position: 'absolute',
+        height: 'fit-content',
+        width: '300px',
+        overflow: 'auto',
+        bottom: '0',
       };
 
       const chatStyles = {
@@ -123,6 +123,7 @@ import { usePubNub } from 'pubnub-react';
       
       const footerStyles = {
         display: 'flex',
+        width: '300px',
       };
       
       const inputStyles = {
@@ -130,6 +131,7 @@ import { usePubNub } from 'pubnub-react';
         fontSize: '1.1rem',
         padding: '10px 15px',
         border: '1px solid transparent',
+        width:'165px',
       };
       
       const buttonStyles = {
