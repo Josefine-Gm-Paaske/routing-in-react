@@ -34,7 +34,7 @@ import { usePubNub } from 'pubnub-react';
           <div id='chat' style={pageStyles}>
             <div style={chatStyles}>
               <div style={headerStyles}>
-                  <button 
+                  <button style={chatHide} className='button'
                   onClick={e => {
                     var chat = document.getElementById("chat");
                     e.preventDefault();
@@ -139,4 +139,13 @@ import { usePubNub } from 'pubnub-react';
         padding: '10px 15px',
         border: '1px solid transparent',
       };
+
+      const chatHide = {
+        backgroundColor:'black',
+        color: 'white',
+        border: 'none',
+        width:'100%',
+        cursor:'pointer',
+        fontSize:'108%',
+      }
 export default Chat;
