@@ -93,7 +93,7 @@ import { usePubNub } from 'pubnub-react';
       
       const pageStyles = {
         border: '1px solid black',
-        position: 'absolute',
+        position: 'fixed',
         height: 'fit-content',
         width: '300px',
         overflow: 'auto',
@@ -171,7 +171,7 @@ import { usePubNub } from 'pubnub-react';
         fontWeight:'bold',
         backgroundColor: 'black',
         borderRadius: '50%',
-        position: 'absolute',
+        position: 'fixed',
         height: '80px',
         width: '80px',
         bottom: '8px',
